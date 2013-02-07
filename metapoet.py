@@ -14,7 +14,7 @@ t = Text(tokens)
 # t.generate(30)
 
 estimator = lambda fdist, bins: LidstoneProbDist(fdist, 0.2)
-trigram_model = NgramModel(3, t, estimator)
+trigram_model = NgramModel(3, t, estimator = estimator)
 
 token_array = trigram_model.generate(150)[10:]
 
